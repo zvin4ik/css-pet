@@ -406,125 +406,277 @@ router.get('/template-3', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('template-3', {
-    layout:'template-3',
+    layout: 'template-3',
     page: {
-      title: "Example Page"
+      title: 'Example Page',
     },
-    
+
     header: [
       {
-        text: "Features",
-        url: "https://example.com/home"
+        text: 'Features',
+        url: 'https://example.com/home',
       },
       {
-        text: "Enterprise",
-        url: "https://example.com/about"
+        text: 'Enterprise',
+        url: 'https://example.com/about',
       },
       {
-        text: "Support",
-        url: "https://example.com/services"
-      }
+        text: 'Support',
+        url: 'https://example.com/services',
+      },
     ],
 
     hero: {
-      title: "First featurette heading. It’ll blow your mind.",
-      text: "Some great placeholder content for the first featurette here. Imagine some exciting prose here.",
-      photo: "https://picsum.photos/500/500"
+      title:
+        'First featurette heading. It’ll blow your mind.',
+      text: 'Some great placeholder content for the first featurette here. Imagine some exciting prose here.',
+      photo: 'https://picsum.photos/500/500',
     },
 
     blog: [
       {
-        title: "Latest post",
-        text: "This is a wider card with supporting text below as a natural lead-in to additional content",
-        button: "View details",
-        href: "https://example.com/",
-        img: "https://picsum.photos/140/140"
+        title: 'Latest post',
+        text: 'This is a wider card with supporting text below as a natural lead-in to additional content',
+        button: 'View details',
+        href: 'https://example.com/',
+        img: 'https://picsum.photos/140/140',
       },
       {
-        title: "Featured story",
-        text: "This is a wider card with supporting text below as a natural lead-in to additional content",
-        button: "View details",
-        href: "https://example.com/",
-        img: "https://picsum.photos/140/140"
+        title: 'Featured story',
+        text: 'This is a wider card with supporting text below as a natural lead-in to additional content',
+        button: 'View details',
+        href: 'https://example.com/',
+        img: 'https://picsum.photos/140/140',
       },
       {
-        title: "Popular post",
-        text: "This is a wider card with supporting text below as a natural lead-in to additional content",
-        button: "View details",
-        href: "https://example.com/",
-        img: "https://picsum.photos/140/140"
-      }
+        title: 'Popular post',
+        text: 'This is a wider card with supporting text below as a natural lead-in to additional content',
+        button: 'View details',
+        href: 'https://example.com/',
+        img: 'https://picsum.photos/140/140',
+      },
     ],
 
     form: {
-      title: "Sign up form",
-      info: "Some placeholder content in a paragraph below the heading and date.",
-      button: "Sign up",
-      href: "https://example.com/"
+      title: 'Sign up form',
+      info: 'Some placeholder content in a paragraph below the heading and date.',
+      button: 'Sign up',
+      href: 'https://example.com/',
     },
-  
-    
+
     footer: [
       {
-        title: "Features",
+        title: 'Features',
         links: [
           {
-            text: "Cool stuff",
-            url: "https://example.com/cool-stuff"
+            text: 'Cool stuff',
+            url: 'https://example.com/cool-stuff',
           },
           {
-            text: "Random feature",
-            url: "https://example.com/random-feature"
+            text: 'Random feature',
+            url: 'https://example.com/random-feature',
           },
           {
-            text: "Team feature",
-            url: "https://example.com/team-feature"
+            text: 'Team feature',
+            url: 'https://example.com/team-feature',
           },
           {
-            text: "Stuff for developers",
-            url: "https://example.com/stuff-for-developers"
-          }
-        ]
+            text: 'Stuff for developers',
+            url: 'https://example.com/stuff-for-developers',
+          },
+        ],
       },
       {
-        title: "Resources",
+        title: 'Resources',
         links: [
           {
-            text: "Resource name",
-            url: "https://example.com/resource-name"
+            text: 'Resource name',
+            url: 'https://example.com/resource-name',
           },
           {
-            text: "Another resource",
-            url: "https://example.com/another-resource"
+            text: 'Another resource',
+            url: 'https://example.com/another-resource',
           },
           {
-            text: "Final resource",
-            url: "https://example.com/final-resource"
-          }
-        ]
+            text: 'Final resource',
+            url: 'https://example.com/final-resource',
+          },
+        ],
       },
       {
-        title: "About",
+        title: 'About',
         links: [
           {
-            text: "Team",
-            url: "https://example.com/team"
+            text: 'Team',
+            url: 'https://example.com/team',
           },
           {
-            text: "Locations",
-            url: "https://example.com/locations"
+            text: 'Locations',
+            url: 'https://example.com/locations',
           },
           {
-            text: "Privacy",
-            url: "https://example.com/privacy"
+            text: 'Privacy',
+            url: 'https://example.com/privacy',
           },
           {
-            text: "Terms",
-            url: "https://example.com/terms"
-          }
-        ]
-      }
-    ]
+            text: 'Terms',
+            url: 'https://example.com/terms',
+          },
+        ],
+      },
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/template-5', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('template-5', {
+    layout: 'template-5',
+    page: {
+      title: 'Example Page',
+    },
+
+    header: [
+      {
+        text: 'Features',
+        url: 'https://example.com/home',
+      },
+      {
+        text: 'Enterprise',
+        url: 'https://example.com/about',
+      },
+      {
+        text: 'Support',
+        url: 'https://example.com/services',
+      },
+    ],
+
+    form: {
+      title: 'Please sign in',
+
+      inputs: [
+        {
+          id: 1,
+          name: 'emailAddress',
+          placeholder: 'Email address',
+          type: 'email',
+        },
+        {
+          id: 2,
+          name: 'userPassword',
+          placeholder: 'Password',
+          type: 'password',
+        },
+      ],
+
+      checkbox: {
+        label: 'Remember me',
+        name: 'remember',
+      },
+
+      button: 'Sign in',
+
+      info: 'Stay updated on new releases and features, guides, and case studies.',
+    },
+
+    messages: {
+      title: 'List groups',
+      list: [
+        {
+          name: 'Tom',
+          message:
+            'I just got back from a trip to Europe. It was amazing!...',
+          day: 'Tue',
+        },
+        {
+          name: 'Emily',
+          message:
+            "I can't wait for the weekend. I'm planning to go hiking with some friends...",
+          day: 'Wed',
+        },
+      ],
+    },
+
+    advantages: [
+      {
+        title: '24/7 Availability',
+        text: 'On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the.',
+      },
+      {
+        title: '10 Years of Expertise',
+        text: 'Fill out all required fields using real data on the checkout page.',
+      },
+      {
+        title: 'Loyalty Program',
+        text: 'While you were paying, we had already prepared access to our Member Area, where you can read more about the status of your order.',
+      },
+    ],
+
+    footer: [
+      {
+        title: 'Features',
+        links: [
+          {
+            text: 'Cool stuff',
+            url: 'https://example.com/cool-stuff',
+          },
+          {
+            text: 'Random feature',
+            url: 'https://example.com/random-feature',
+          },
+          {
+            text: 'Team feature',
+            url: 'https://example.com/team-feature',
+          },
+          {
+            text: 'Stuff for developers',
+            url: 'https://example.com/stuff-for-developers',
+          },
+        ],
+      },
+      {
+        title: 'Resources',
+        links: [
+          {
+            text: 'Resource name',
+            url: 'https://example.com/resource-name',
+          },
+          {
+            text: 'Another resource',
+            url: 'https://example.com/another-resource',
+          },
+          {
+            text: 'Final resource',
+            url: 'https://example.com/final-resource',
+          },
+        ],
+      },
+      {
+        title: 'About',
+        links: [
+          {
+            text: 'Team',
+            url: 'https://example.com/team',
+          },
+          {
+            text: 'Locations',
+            url: 'https://example.com/locations',
+          },
+          {
+            text: 'Privacy',
+            url: 'https://example.com/privacy',
+          },
+          {
+            text: 'Terms',
+            url: 'https://example.com/terms',
+          },
+        ],
+      },
+    ],
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
