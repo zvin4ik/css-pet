@@ -1,0 +1,12 @@
+{{#with header}}
+<div class="logo">{{brandName}}</div>
+<nav class="nav">
+	{{#each links}}
+	<a href="{{url}}" class="nav_link">{{text}}</a>
+	{{/each}}
+</nav>
+{{#with ad}}
+<a href="{{url}}" class="ad">{{text}}</a>
+{{/with}}
+<div class="users"> {{userOnline}}</div>
+{{/with}}
