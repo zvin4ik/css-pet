@@ -1,0 +1,507 @@
+@layer normalize, block, element, mod, adaptive;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+	border-color: white;
+	margin: 0;
+}
+
+:root {
+	/*колірна сітка*/
+	--color-white: white;
+	--color-black: black;
+	--color-gray: rgba(0, 0, 0, 0.7);
+	--color-lighter: rgba(255, 255, 255, 0.7);
+
+
+	--color-primary: #0d6efd;
+	--color-light: #ced4da;
+
+	--color-background-dark: #212529;
+	--color-background: #efeff4;
+
+	--color-blue-light: #008be1;
+	--color-blue-dark: #0068bc;
+
+	--color-yellow-light: #fff8e3;
+	--color-yellow-dark: #ffbf35;
+
+	--color-purple-light: #5b39ad;
+	--color-purple-dark: #402b9c;
+
+	--color-success: #00801b;
+	--color-warning: #f51b2a;
+
+	/*відступи*/
+	--spacing-1: 8px;
+	--spacing-2: 12px;
+	--spacing-3: 16px;
+	--spacing-4: 20px;
+	--spacing-5: 24px;
+	--spacing-6: 28px;
+	--spacing-7: 32px;
+	--spacing-8: 36px;
+	--spacing-9: 40px;
+
+	/*розмір шрифту*/
+	--size-1: 14px;
+	--size-2: 16px;
+	--size-3: 20px;
+	--size-4: 24px;
+	--size-5: 28px;
+	--size-6: 32px;
+
+	/*заокруглення*/
+	--radius-1: 4px;
+	--radius-2: 8px;
+
+	/*прозорість*/
+	--opacity-1: 0.7;
+	--opacity-2: 0.3;
+
+	--transition-1: 0.7s;
+
+	--line-height: 1.5em;
+}
+
+@layer block {
+
+	.page {
+		background-color: var(--color-background);
+		width: 100%;
+		min-height: 100vh;
+	}
+
+	.main {
+		padding: var(--spacing-9);
+		display: grid;
+		gap: var(--spacing-9);
+	}
+
+	.vertical {
+		display: grid;
+		gap: var(--spacing-5);
+	}
+
+	.aside {
+		padding: var(--spacing-5);
+		background-color: var(--color-background-dark);
+		align-content: flex-start;
+	}
+
+	.icon {
+		display: block;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	.nav-button {
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-1);
+		text-decoration: none;
+		padding: var(--spacing-2);
+		border-radius: var(--radius-1);
+	}
+
+	.text {
+		font-family: 'Roboto', sans-serif;
+		color: var(--color-black);
+		font-size: var(--size-2);
+	}
+
+	.click {
+		transition: opacity var(--transition-1);
+		cursor: pointer;
+	}
+
+	.click:hover {
+		opacity: var(--opacity-1);
+	}
+
+	.click:active {
+		opacity: var(--opacity-2);
+	}
+
+	.header {
+		background-color: var(--color-white);
+		padding: var(--spacing-2);
+	}
+
+	.layout {
+		width: 100%;
+		max-width: 1300px;
+		margin: 0 auto;
+		gap: var(--spacing-9);
+		display: grid;
+	}
+
+	.field {
+		min-height: 36px;
+		border: 1px solid var(--color-light);
+		border-radius: var(--radius-1);
+		padding: 0 var(--spacing-2);
+	}
+
+	.box {
+		background-color: var(--color-white);
+		padding: var(--spacing-5);
+		border-radius: 16px;
+	}
+
+	.analityc {
+		border-radius: 8px;
+		padding: var(--spacing-5);
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	.relative {
+		position: relative;
+	}
+
+	.purchase	/* домашка */	{
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+		width: 810px;
+		border-radius: var(--radius-2);
+		background-color: var(--color-white);
+		padding: var(--spacing-5);
+		gap: 24px;
+		align-items: start;
+	}
+
+	.purchase div:first-child	/*домашка*/	{
+		grid-column: 1 / 5;
+	}
+
+	.payment /*домашка*/ {
+		border-radius: var(--radius-2);
+		background-color: var(--color-white);
+		padding: 24px;
+		width: 450px;
+		display: grid;
+		gap: 24px;
+	}
+
+	.box__list {
+		display: flex;
+		gap: 24px;
+		align-items: start;
+	}
+}
+
+@layer element {
+	.page__aside {
+		grid-row: 1 / 3;
+	}
+
+	.aside__logo {
+		color: var(--color-white);
+		font-size: var(--size-4);
+		padding-bottom: var(--spacing-4);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+	}
+
+	.nav-button__icon {
+		height: 16px;
+		width: 16px;
+	}
+
+	.header__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.header__search {
+		max-width: 30%;
+		min-width: 180px;
+		width: 100%;
+		background-color: #F8FAFC;
+	}
+
+	.header__icon-search {
+		height: 20px;
+		width: 20px;
+		position: absolute;
+		top: calc(50% - (20px / 2));
+		left: var(--spacing-2);
+	}
+
+	.icon--header-settings {
+		height: 28px;
+		width: 28px;
+		position: absolute;
+		top: calc(50% - (28px / 2));
+		right: -78px;
+	}
+
+	.field__select {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		cursor: pointer;
+	}
+
+	.analityc__block {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr 1fr;
+		gap: 24px;
+	}
+
+	.analityc__button {
+		height: 44px;
+		width: 44px;
+	}
+
+	.analityc__title {
+		font-size: var(--size-6);
+	}
+
+	.analityc__arrow {
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 0;
+		left: calc(100% + var(--spacing-1));
+	}
+
+	.header__icon__list	/*домашка*/	{
+		display: flex;
+		gap: var(--spacing-4);
+	}
+
+	.payment__form /*домашка*/ {
+		display: grid;
+		grid-template-columns: repeat(2, 2fr);
+		grid-template-rows: auto;
+		gap: var(--spacing-5);
+	}
+
+}
+
+@layer mod {
+	.page--dashboard {
+		display: grid;
+		grid-template-columns: 280px 1fr;
+		grid-template-rows: min-content 1fr;
+	}
+
+	.text--light {
+		color: var(--color-white);
+	}
+
+	.text--heading {
+		font-size: var(--size-4);
+		color: var(--color-background-dark);
+		font-weight: 500;
+	}
+
+	.text--small {
+		font-size: var(--size-1);
+	}
+
+	.text--gray {
+		color: var(--color-gray);
+	}
+
+	.text--lighter {
+		color: var(--color-lighter);
+	}
+
+	.text--bold {
+		font-weight: 500;
+	}
+
+	.text--line {
+		line-height: var(--line-height);
+	}
+
+	.vertical--small {
+		gap: var(--spacing-2);
+	}
+
+	/* .vertical--big {
+		gap: var(--spacing-5);
+	} */
+
+	.nav-button--active {
+		background: var(--color-primary);
+	}
+
+	.field--header {
+		padding-left: 44px;
+		padding-right: 44px;
+		height: 52px;
+		width: 100%;
+	}
+
+	.field--header::placeholder {
+		color: #BDBDBD;
+	}
+
+	.icon--button {
+		border-radius: var(--radius-1);
+	}
+
+	.icon--color-blue {
+		background-color: var(--color-blue-dark);
+	}
+
+	.icon--color--violet	/*домашка*/	{
+		background-color: #402B9C;
+	}
+
+	.icon--color-yellow /*домашка*/	{
+		background-color: #FFF8E3;
+	}
+
+	.icon--color-light-blue {
+		background-color: #E1F3FC;
+	}
+
+	.field--select {
+		display: flex;
+		align-items: center;
+		position: relative;
+		width: 80%;
+		margin-top: var(--spacing-1);		
+	}
+
+	.analityc--double {
+		grid-row: 1 / 3;
+	}
+
+	.analitic--cards	/*домашка*/	{
+		display: flex;
+		flex-direction: row;
+		justify-content: start;
+		align-items: center;
+		gap: 12px;
+	}
+
+	.analityc--cards-text {
+		font-size: var(--size-3);
+		font-weight: 500;
+	}
+
+	.analityc--blue {
+		background-color: var(--color-blue-light);
+	}
+
+	.analityc--violet	/*домашка*/	{
+		background-color: #5B39AD;
+	}
+
+	.analityc--card-money /*домашка*/ {
+		display: grid;
+		gap: var(--spacing-1);
+	}
+
+	.card--yellow /*домашка*/ {
+		border: 1px solid #E0E4E8;
+		border-radius: var(--radius-2);
+	}
+
+	.text--warning-red /*домашка*/ {
+		color: red;
+	}
+
+	.text--success-green	/*домашка*/	{
+		color: green;
+	}
+
+
+	.divider--top::before /*домашка*/ {
+		content: "";
+		position: absolute;
+		width: 100%;
+		top: calc(65% * 2);
+		left: 0;
+		right: 0;
+		height: 1px;
+		background-color: var(--color-light);
+		z-index: 1;
+	}
+
+	.divider--top::after	/*домашка*/	{
+		content: "";
+		position: absolute;
+		width: 100%;
+		top: calc(150% * 2);
+		left: 0;
+		right: 0;
+		height: 1px;
+		background-color: var(--color-light);
+		z-index: 2;
+	}
+
+	.payment--radio /*домашка*/ {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: var(--spacing-2);
+	}
+
+	.payment--title /*домашка*/ {
+		padding-bottom: 24px;
+	}
+
+	.payment--divider /*домашка*/ {
+		width: 100%;
+		height: 1px;
+		background-color: #ccc;
+		margin: 0;
+	}
+
+	.payment--form-input /*домашка*/ {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: var(--spacing-1);
+	}
+
+	.divider /*домашка*/ {
+		width: 100%;
+		background-color: var(--color-light);
+		height: 0.5px;
+	}
+
+	.payment--button /*домашка*/ {
+		border-radius: 4.8px;
+		border: 1px solid var(--color-primary);
+		background: var(--color-primary);
+		display: flex;
+		padding: 8px 0px;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		text-decoration: none;
+	}
+
+}
+
+@layer adaptive {
+	@media all and (width <=1000px) {
+		.page--dashboard {
+			grid-template-columns: 1fr;
+		}
+
+		.aside {
+			display: none;
+		}
+
+		.header {
+			display: none;
+		}		
+	}
+}
